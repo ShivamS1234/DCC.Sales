@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DCC.SalesApp.Pages.DSRReport"
+            xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms">
+    <ContentPage.Content>
+        <StackLayout StyleClass="Stack">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Date" Grid.Row="0" Grid.Column="0" StyleClass="LabelClass"/>
+                <DatePicker x:Name="pkrFrom" Grid.Row="0" Grid.Column="1" StyleClass="PickerStyle" DateSelected="pkrFrom_DateSelected"/>
+                <DatePicker x:Name="pkrTo" Grid.Row="0" Grid.Column="2" StyleClass="PickerStyle" DateSelected="pkrTo_DateSelected"/>
+
+                <Label Text="User" Grid.Row="1" Grid.Column="0" StyleClass="LabelClass"/>
+                <Picker x:Name="pkrUser" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" StyleClass="PickerStyle" ItemDisplayBinding="{Binding nameCode}" SelectedIndexChanged="pkrUser_SelectedIndexChanged"/>
+
+                <Label Text="Warehouse" Grid.Row="2" Grid.Column="0" StyleClass="LabelClass"/>
+                <Picker x:Name="pkrWareHouse" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" StyleClass="PickerStyle" ItemDisplayBinding="{Binding nameCode}" SelectedIndexChanged="pkrWareHouse_SelectedIndexChanged"/>
+
+                <!--<Label Text="Region" Grid.Row="3" Grid.Column="0" StyleClass="LabelClass"/>
+                <Picker x:Name="pkrArea" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" StyleClass="PickerStyle" ItemDisplayBinding="{Binding AreaCode}"/>-->               
+                
+            </Grid>
+
+            <!--<dxGrid:GridControl x:Name="gridReport" ItemsSource="{Binding DSRReport}"  AutoFilterPanelVisibility="False" IsReadOnly="True" AllowGroup="True" AllowGroupCollapse="True">
+                <dxGrid:GridControl.Columns>                    
+                    --><!--<dxGrid:TextColumn FieldName="region" Caption="region" IsGrouped="True"/>--><!--
+                    <dxGrid:TextColumn FieldName="custName" Caption="CustName" IsGrouped="True"/>
+                    <dxGrid:NumberColumn FieldName="orderNo" Caption="OrderNo"/>
+                    <dxGrid:TextColumn FieldName="Itemname" Caption="ItemName"/>
+                    <dxGrid:NumberColumn FieldName="Quantity" Caption="Quantity"/>
+                    <dxGrid:TextColumn FieldName="DeliveredQty" Caption="DelQty"/>
+                    <dxGrid:TextColumn FieldName="OpenQty" Caption="OpenQty"/>
+                    <dxGrid:TextColumn FieldName="Rate" Caption="Rate"/>
+                    <dxGrid:TextColumn FieldName="TotalAmount" Caption="TotalAmt"/>
+
+                </dxGrid:GridControl.Columns>
+            </dxGrid:GridControl>-->
+            <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateColumns="False" GroupingMode="Multiple" AllowGroupExpandCollapse="True">
+                <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                    <syncfusion:GridTextColumn HeaderText="custName" MappingName="custName" IsHidden="True"/>
+                    <syncfusion:GridNumericColumn HeaderText="orderNo" MappingName="orderNo" NumberDecimalDigits="0"/>
+                    <syncfusion:GridTextColumn HeaderText="Itemname" MappingName="Itemname"/>
+                    <syncfusion:GridNumericColumn HeaderText="Quantity" MappingName="Quantity" NumberDecimalDigits="0" />
+                    <syncfusion:GridNumericColumn HeaderText="DeliveredQty" MappingName="DeliveredQty" />
+                    <syncfusion:GridNumericColumn HeaderText="OpenQty" MappingName="OpenQty" NumberDecimalDigits="0" />
+                    <syncfusion:GridNumericColumn HeaderText="Rate" MappingName="Rate" />
+                    <syncfusion:GridNumericColumn HeaderText="TotalAmount" MappingName="TotalAmount" />
+                </syncfusion:SfDataGrid.Columns>
+            </syncfusion:SfDataGrid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DCC.SalesApp.Pages.RetailersView.AddRetailer"
+             xmlns:local="clr-namespace:DCC.SalesApp.CustomRenderers"
+             xmlns:inthelper="clr-namespace:DCC.SalesApp.Helpers"
+             xmlns:viewModel="clr-namespace:DCC.SalesApp.ViewModels.RetailerVM">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <inthelper:NullableIntConverter x:Key="NullableIntConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <viewModel:AddRetailerViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView Padding="10,10,10,10">
+            <StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Code" FontSize="Small"/>
+                    <local:BorderEntry  Keyboard="Text" x:Name="txtCode" Text="{Binding Code}"/>
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Name" FontSize="Small"/>
+                    <local:BorderEntry  Keyboard="Text" x:Name="txtName" Text="{Binding Name}" />
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Address" FontSize="Small"/>
+                    <Editor Keyboard="Text" x:Name="txtAddress" HeightRequest="80" Text="{Binding Address}" />
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Area" FontSize="Small"/>
+                    <local:BorderPicker ItemsSource="{Binding areas}" ItemDisplayBinding="{Binding AreaCode}" Title="--Select Area--" SelectedItem="{Binding selectedArea}"/>
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Owner Name" FontSize="Small"/>
+                    <local:BorderEntry Keyboard="Text" x:Name="txtOName" Text="{Binding Owner}" />
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Owner Mobile No." FontSize="Small"/>
+                    <local:BorderEntry Keyboard="Text" x:Name="txtOMobileNo"  Text="{Binding OwnerMobileNo}"/>
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Owner Email" FontSize="Small"/>
+                    <local:BorderEntry Keyboard="Text" x:Name="txtOEmail" Text="{Binding OwnerEmail}" />
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="BP Group" FontSize="Small"/>
+                    <local:BorderPicker ItemsSource="{Binding bpGroup}" ItemDisplayBinding="{Binding Code}" Title="--Select BP Group--" SelectedItem="{Binding selectedBPGroup}"/>
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="BP Class" FontSize="Small"/>
+                    <local:BorderPicker ItemsSource="{Binding bpClass}" ItemDisplayBinding="{Binding Code}" Title="--Select BP Class--" SelectedItem="{Binding selectedBPClass}"/>
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Balance" FontSize="Small"/>
+                    <local:BorderEntry  x:Name="txtBalance" Text="{Binding Balance, Converter={StaticResource NullableIntConverter}}" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Spacing="1">
+                    <Label Text="Credit Limit" FontSize="Small"/>
+                    <local:BorderEntry  x:Name="txtCredit" Text="{Binding CrLimit, Converter={StaticResource NullableIntConverter}}" Keyboard="Numeric" />
+                </StackLayout>
+                <Button x:Name="btnSubmit" Text="Register" HeightRequest="60" Command="{Binding AddNewCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             xmlns:local="clr-namespace:DCC.SalesApp;clr-namespace:DCC.SalesApp;"
+             x:Class="DCC.SalesApp.Pages.Login"
+             >
+    <ContentPage.Content >
+        <StackLayout x:Name="stackPrinc" StyleClass="Stack"  AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" VerticalOptions="CenterAndExpand">
+            
+            <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+
+                </Grid.RowDefinitions>
+                <Image Source="logo.png" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0" VerticalOptions="Start"/>
+                <Label Text="Enter Login Details"  TextColor="#04b0c4" HorizontalTextAlignment="Center" StyleClass="Header" Grid.Column="1" Grid.Row="1" VerticalOptions="Start"/>
+                <Image Source="iconUsername.png" HeightRequest="30" VerticalOptions="Center" Grid.Row="2" Grid.Column="0" HorizontalOptions="End"/>
+                <Entry x:Name="Email" TextColor="#04b0c4" FontSize="14" Text="admin@admin.com" Keyboard="Email" Placeholder="Email" StyleClass="TextClass" WidthRequest="200" HorizontalOptions="Center" Grid.Column="1" Grid.Row="2"/>
+
+                <Image Source="iconPassword.png" HeightRequest="30" VerticalOptions="Center" Grid.Row="3" Grid.Column="0" HorizontalOptions="End"/>
+                <Entry x:Name="Password" TextColor="#04b0c4" FontSize="14" Text="user@123" IsPassword="True" Placeholder="Password" StyleClass="TextClass" WidthRequest="200" HorizontalOptions="Center" Grid.Column="1" Grid.Row="3"/>
+
+                
+            </Grid>
+            <StackLayout Spacing="0">
+                <Button x:Name="LoginButton" FontSize="15" TextColor="#04b0c4" Text="Login" Clicked="LoginClicked" StyleClass="BtnClass"  HorizontalOptions="Center"  VerticalOptions="Start" WidthRequest="200"/>
+                <Button x:Name="SettingButton" FontSize="15" TextColor="#04b0c4" Text="Setting" Clicked="SettingClicked" StyleClass="BtnClass"  HorizontalOptions="Center"  VerticalOptions="Center"  WidthRequest="200"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+    
+   
+</ContentPage>

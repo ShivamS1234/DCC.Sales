@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:DCC.SalesApp.Pages"
+              xmlns:views="clr-namespace:DCC.SalesApp.Views"
+              x:Class="DCC.SalesApp.Pages.Customers"
+             xmlns:dxGrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v17.1">
+    <ContentPage.Content>
+        <views:ViewCustomer x:Name="viewCustomer"/>
+    </ContentPage.Content>
+</ContentPage>
