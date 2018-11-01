@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             xmlns:local="clr-namespace:DCC.SalesApp;clr-namespace:DCC.SalesApp;"
+             x:Class="DCC.SalesApp.Pages.LoginPageNew"
+             BackgroundColor="{StaticResource PageBackgroundColor}"
+             xmlns:ctrls="clr-namespace:AsNum.XFControls;assembly=AsNum.XFControls"
+             >
+    <ContentPage.Content>
+        <Grid HorizontalOptions="Center"  VerticalOptions="Center">
+             <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="50"/>
+             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Image Source="logoNew.png" Aspect="AspectFit" Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+       <StackLayout Grid.Column="1" Grid.Row="1">
+                <StackLayout Orientation="Vertical">
+                     <local:CustomEntry StyleClass="TextClass" Placeholder="Email" HorizontalTextAlignment="Start" HorizontalOptions="CenterAndExpand"  WidthRequest="300" HeightRequest="40" />
+                    <local:CustomEntry StyleClass="TextClass" Placeholder="Password" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"  WidthRequest="300" HeightRequest="40" />
+                    
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Transparent"> 
+                         <ctrls:CheckBox  VerticalOptions="Start" OffImg="UncheckIcon.png" OnImg="CheckIcon.png"/>
+                         <Label Text="Remember me"  StyleClass="LabelCheckBox"  HorizontalOptions="Start" VerticalOptions="Center"  />   
+                    </StackLayout>
+                </StackLayout>
+                         <Button x:Name="btnLogin" CornerRadius="25" StyleClass="BtnClass" Text="LOGIN"  BackgroundColor="White" WidthRequest="300" HeightRequest="40"/>
+         </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="2" Spacing="0" Padding="0">
+                <Image Source="setting_bg.png" Margin="10,0,10,0" HeightRequest="24" WidthRequest="24"/>
+                <Image Source="settingLogin.png" Margin="10,0,10,0" HeightRequest="24" WidthRequest="24"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+   
+</ContentPage>

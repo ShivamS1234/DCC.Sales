@@ -19,7 +19,7 @@ namespace DCC.SalesApp
             {
               
                 InitializeComponent();
-                MainPage = new Login();
+                MainPage = new LoginPageNew();
                 //this.MainPage = GetMainPage();
             }
             catch (Exception ex)

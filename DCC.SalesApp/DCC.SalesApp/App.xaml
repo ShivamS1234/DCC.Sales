@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
@@ -7,7 +7,12 @@
         <ResourceDictionary>
             <OnPlatform x:Key="FontFamilyName" x:TypeArguments="x:String" iOS="Verdana" Android="monospace" WinPhone="Segoe UI" />
 
-
+            <OnPlatform x:Key="PageBackgroundColor" x:TypeArguments="Color">
+                <OnPlatform.iOS>#00A2FF</OnPlatform.iOS>
+                <OnPlatform.Android>#00A2FF</OnPlatform.Android>
+                <OnPlatform.WinPhone>#00A2FF</OnPlatform.WinPhone>
+            </OnPlatform>
+            
             <OnPlatform x:Key="BgColor" x:TypeArguments="Color">
                 <OnPlatform.iOS>#fff</OnPlatform.iOS>
                 <OnPlatform.Android>#fff</OnPlatform.Android>
@@ -79,10 +84,12 @@
                 <Setter Property="FontAttributes" Value="Bold" />
 
             </Style>
-            <!--<Style TargetType="Label" Class="LabelHeader">
+           <Style TargetType="Label" Class="LabelCheckBox">
                 <Setter Property="FontSize" Value="10" />
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="TextColor" Value="{ StaticResource HeaderColor }" />
+                <Setter Property="TextColor" Value="{ StaticResource BgColor }" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>-->
 
             <Style TargetType="Label" Class="LabelClass">
