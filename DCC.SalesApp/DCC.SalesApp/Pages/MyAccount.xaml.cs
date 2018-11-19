@@ -92,7 +92,7 @@ namespace DCC.SalesApp.Pages
                 }
             }
             else
-                App.Current.MainPage = new Login();
+                App.Current.MainPage = new LoginPageNew();
         }
         private async void location_Clicked(object sender, EventArgs e)
         {

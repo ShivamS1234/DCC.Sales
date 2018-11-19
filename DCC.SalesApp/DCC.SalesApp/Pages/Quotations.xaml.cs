@@ -43,5 +43,26 @@ namespace DCC.SalesApp.Pages
         {
             this.Navigation.PushAsync(new QuotationNew(-1) { Title = "New Quotation"});
         }
+
+        private bool _canClose = true;
+        protected override bool OnBackButtonPressed()
+        {
+            //return base.OnBackButtonPressed();
+            if (_canClose)
+            {
+                ShowExitDialog();
+            }
+            return _canClose;
+        }
+        private async void ShowExitDialog()
+        {
+            var answer = await DisplayAlert("Exit", "Want to go Dashboard Screen?", "Yes", "No");
+            if (answer)
+            {
+                App.Current.MainPage = new MainPage();
+                _canClose = false;
+                //OnBackButtonPressed;
+            }
+        }  
     }
 }

@@ -30,9 +30,16 @@ namespace DCC.SalesApp.Droid.Renderers
                 }
                 else
                 {
-                    Control.Background = this.Resources.GetDrawable(Resource.Drawable.RoundedCornerEntry);
-                    Control.SetTextColor(Android.Graphics.Color.Rgb(3, 104, 144));
-                    Control.SetTextSize(Android.Util.ComplexUnitType.FractionParent, 11);
+                    if (!(e.NewElement as CustomEntry).HasBorder)
+                    {
+                        Control.SetBackground(null);
+                    }
+                    else
+                    {
+                        Control.Background = this.Resources.GetDrawable(Resource.Drawable.RoundedCornerEntry);
+                        Control.SetTextColor(Android.Graphics.Color.Rgb(3, 104, 144));
+                        Control.SetTextSize(Android.Util.ComplexUnitType.FractionParent, 11);
+                    }
                 }
 
                 //  Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);

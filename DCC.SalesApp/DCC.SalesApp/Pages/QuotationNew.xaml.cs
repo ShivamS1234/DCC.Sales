@@ -17,6 +17,12 @@ namespace DCC.SalesApp.Pages
         Int32 QuotationID = -1;
 
         public static Models.Customer _retailers { get; set; }
+
+        public QuotationNew()
+        {
+            InitializeComponent();
+        }
+
         public QuotationNew(Int32 _quotationID)
         {
             InitializeComponent();
@@ -36,7 +42,6 @@ namespace DCC.SalesApp.Pages
         public void initializeCustomer()
         {
             Customerslist = App.Database.GetAllCustomerDetails().ToList();
-            //pkrCustomer.ItemsSource = Customerslist;
 
         }
 
@@ -45,83 +50,12 @@ namespace DCC.SalesApp.Pages
             if (QuotationID > 0)
             {
                 _Quotation = App.Database.GetQuotation(QuotationID);
-                //pkrCustomer.SelectedIndex = Customerslist.FindIndex(a => a.Code == _Quotation.CustCode);
                 pkrCustomer.Text = Customerslist.Find(a => a.Code == _Quotation.CustCode).nameCode;
                 pkrShipping.SelectedIndex = customerAddress.IndexOf(customerAddress.Where(X => X.ID == _Quotation.ShiptoID).FirstOrDefault());
                 pkrBilling.SelectedIndex = customerAddress.IndexOf(customerAddress.Where(X => X.ID == _Quotation.BilltoID).FirstOrDefault());
 
             }
         }
-        //private void pkrCustomer_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        var customer = (Models.Customer)pkrCustomer.SelectedItem;
-        //        Int32 _AreaId = Convert.ToInt32(customer.AreaID);
-        //        if (_AreaId > 0)
-        //        {
-        //            txtArea.Text = Convert.ToString(customer.AreaID);
-        //            lblAreaText.Text = App.database.GetAreaName(_AreaId);
-        //        }
-        //        else
-        //        {
-        //            txtArea.Text = "0";
-        //            lblAreaText.Text = "";
-        //        }
-        //        IEnumerable<Models.CustomerContact> customerContact = App.Database.GetCustomerContact(customer.ID);
-        //        customerAddress = App.Database.getCustomerAddress(customer.ID);
-
-        //        try
-        //        {
-
-        //            pkrBilling.Items.Clear();
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            System.Diagnostics.Debug.WriteLine(ex.Message);
-        //        }
-
-        //        foreach (var it in customerAddress)
-        //        {
-        //            string _item = it.AddressCode + "-" + it.ID;
-        //            this.pkrBilling.Items.Add(_item);
-        //        }
-        //        try
-        //        {
-        //            pkrShipping.Items.Clear();
-        //        }
-        //        catch (Exception ex) { System.Diagnostics.Debug.WriteLine(ex.Message); }
-        //        foreach (var it in customerAddress)
-        //        {
-        //            string _item = it.AddressCode + "-" + it.ID;
-        //            this.pkrShipping.Items.Add(_item);
-        //        }
-        //        if (customerContact.Count() != 0)
-        //            lblContactPerson.Text = customerContact.First(c => c.ID == customer.ID).contactPerson;
-        //        else
-        //        {
-        //            lblContactPerson.Text = "";
-        //            txtBilling.Text = "";
-        //            txtShipping.Text = "";
-
-        //        }
-
-        //        //if (pkrBilling.HeightRequest == 30)
-        //        //{
-        //        //    pkrBilling.HeightRequest = 31;
-        //        //    pkrShipping.HeightRequest = 31;
-        //        //}
-        //        //else
-        //        //{
-        //        //    pkrBilling.HeightRequest = 30;
-        //        //    pkrShipping.HeightRequest = 30;
-        //        //}
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        System.Diagnostics.Debug.WriteLine(ex.Message);
-        //    }
-        //}
 
         protected override void OnBindingContextChanged()
         {
@@ -210,12 +144,12 @@ namespace DCC.SalesApp.Pages
                     Int32 _AreaId = Convert.ToInt32(customer.AreaID);
                     if (_AreaId > 0)
                     {
-                        txtArea.Text = Convert.ToString(customer.AreaID);
+                        // txtArea.Text = Convert.ToString(customer.AreaID);
                         lblAreaText.Text = App.database.GetAreaName(_AreaId);
                     }
                     else
                     {
-                        txtArea.Text = "0";
+                        //txtArea.Text = "0";
                         lblAreaText.Text = "";
                     }
                     IEnumerable<Models.CustomerContact> customerContact = App.Database.GetCustomerContact(customer.ID);
@@ -256,17 +190,6 @@ namespace DCC.SalesApp.Pages
                         txtShipping.Text = "";
 
                     }
-
-                    //if (pkrBilling.HeightRequest == 30)
-                    //{
-                    //    pkrBilling.HeightRequest = 31;
-                    //    pkrShipping.HeightRequest = 31;
-                    //}
-                    //else
-                    //{
-                    //    pkrBilling.HeightRequest = 30;
-                    //    pkrShipping.HeightRequest = 30;
-                    //}
                 }
                 catch (Exception ex)
                 {

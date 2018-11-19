@@ -8,12 +8,11 @@ namespace DCC.SalesApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
-
         public MainPage()
         {
             InitializeComponent();
+            this.Icon = "Menuicon.png";
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
-       
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

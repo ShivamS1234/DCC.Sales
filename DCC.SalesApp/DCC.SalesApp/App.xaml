@@ -35,7 +35,7 @@
             </OnPlatform>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarTextColor" Value="White"/>
-                <Setter Property="BarBackgroundColor" Value="#036890"/>
+                <Setter Property="BarBackgroundColor" Value="#00a2ff"/>
             </Style>
             <Style TargetType="TabbedPage">
                 <Setter Property="BarTextColor" Value="White"/>
@@ -90,8 +90,32 @@
                 <Setter Property="TextColor" Value="{ StaticResource BgColor }" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
-            </Style>-->
-
+            </Style>
+            
+             <Style TargetType="Label" Class="LabelCheckBoxLogin">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{ StaticResource BgColor }" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+            <Style TargetType="Label" Class="LabelClassNotesKey">
+            <!--    <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />-->
+                <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="12" />
+                <!--<Setter Property="FontAttributes" Value="Bold"/>-->
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+             <Style TargetType="Label" Class="LabelClassNotesValue">
+              <!--  <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />-->
+                <Setter Property="TextColor" Value="#939393" />
+                <Setter Property="FontSize" Value="12" />
+                <!--<Setter Property="FontAttributes" Value="Bold"/>-->
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+            
             <Style TargetType="Label" Class="LabelClass">
                 <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />
                 <Setter Property="TextColor" Value="{ StaticResource textColor }" />
@@ -110,10 +134,25 @@
                 <Setter Property="FontSize" Value="15" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
-
+            
+            <Style TargetType="Label" Class="LabelQuotationValue">
+            <!--    <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />-->
+                <Setter Property="BackgroundColor" Value="#F4F4F4" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            
             <Style TargetType="Picker" Class="PickerStyle">
                 <Setter Property="TextColor" Value="{ StaticResource textColor }" />
                 <Setter Property="VerticalOptions" Value="Start" />
+            </Style>
+            
+            <Style TargetType="Picker" Class="PickerStyleCustomer">
+               <Setter Property="TextColor" Value="#000000" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
             <Style TargetType="DatePicker" Class="DatePickerStyle">
@@ -128,7 +167,7 @@
             </Style>
 
 
-            <!--<Style TargetType="controls:BindableRadioGroup" Class="RdClass">
+           <!--<Style TargetType="controls:BindableRadioGroup" Class="RdClass">
                 <Setter Property="TextColor" Value="{ StaticResource textColor }" />
 
             </Style>-->
@@ -139,6 +178,33 @@
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="Margin" Value="0" />
             </Style>
+            <Style TargetType="Editor" Class="EditorClass">
+                <Setter Property="TextColor"  Value="{ StaticResource textColor }"  />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="BackgroundColor" Value="#F4F4F4"/>
+            </Style>
+            
+            <Style TargetType="local:CustomEntry" Class="TextClassLogin">
+                <Setter Property="TextColor"  Value="{ StaticResource BgColor }"  />
+                <Setter Property="PlaceholderColor"  Value="{ StaticResource BgColor }"  />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Margin" Value="0" />
+            </Style>
+            
+            
+             <Style TargetType="Button" Class="BtnClassLogin">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="WidthRequest" Value="300" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderRadius" Value="18"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="#036890" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            
             <Style TargetType="Button" Class="BtnClass">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="WidthRequest" Value="80" />
@@ -150,7 +216,27 @@
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
-
+            
+            <Style TargetType="Button" Class="BtnNoteStyle">
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="BorderWidth" Value="1" />
+               <Setter Property="BorderColor" Value="#00A2FF" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="#00A2FF" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Padding" Value="15,0,15,0"/>
+            </Style>
+            
+             <Style TargetType="Button" Class="BtnStyleFotter">
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#00A2FF" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            
             <Style TargetType="Button" Class="BtnClass1">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="WidthRequest" Value="80"/>

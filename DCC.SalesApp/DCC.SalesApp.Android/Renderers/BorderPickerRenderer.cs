@@ -36,9 +36,14 @@ namespace DCC.SalesApp.Droid.Renderers
                 shape.SetCornerRadius(0);
                 shape.SetStroke(3, Android.Graphics.Color.LightGray);
                 this.Control.SetBackground(shape);
-
-
-                this.Control.SetBackground(shape);
+                if ((e.NewElement as BorderPicker).HasArrowBorder)
+                {
+                    Control.TextSize = 12;
+                    Control.SetTextColor(Android.Graphics.Color.Black);
+                    Control.SetBackgroundColor(Android.Graphics.Color.ParseColor("#F4F4F4"));
+                    Control.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.style_PickerControl, 0);
+                }
+                
             }
         }
     }

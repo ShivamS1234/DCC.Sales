@@ -7,33 +7,42 @@
              xmlns:ctrls="clr-namespace:AsNum.XFControls;assembly=AsNum.XFControls"
              >
     <ContentPage.Content>
-        <Grid HorizontalOptions="Center"  VerticalOptions="Center">
+        <Grid HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
              <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="Auto"/>
              </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
-            <Image Source="logoNew.png" Aspect="AspectFit" Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-       <StackLayout Grid.Column="1" Grid.Row="1">
+            <Image Source="logoNew.png" Aspect="AspectFit" Margin="0,20,0,0" Grid.Column="1" Grid.Row="0" WidthRequest="170" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+       <StackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="CenterAndExpand">
                 <StackLayout Orientation="Vertical">
-                     <local:CustomEntry StyleClass="TextClass" Placeholder="Email" HorizontalTextAlignment="Start" HorizontalOptions="CenterAndExpand"  WidthRequest="300" HeightRequest="40" />
-                    <local:CustomEntry StyleClass="TextClass" Placeholder="Password" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"  WidthRequest="300" HeightRequest="40" />
+                     <local:CustomEntry  StyleClass="TextClassLogin" Text="{Binding Email}"  Placeholder="Email" HorizontalTextAlignment="Start"   WidthRequest="300" HeightRequest="40" />
+                    <local:CustomEntry StyleClass="TextClassLogin" Text="{Binding Password}"  Placeholder="Password" HorizontalTextAlignment="Start"   WidthRequest="300" HeightRequest="40" />
                     
-                    <StackLayout Orientation="Horizontal" BackgroundColor="Transparent"> 
+                    <StackLayout Margin="0,5,0,0" Orientation="Horizontal" BackgroundColor="Transparent"> 
                          <ctrls:CheckBox  VerticalOptions="Start" OffImg="UncheckIcon.png" OnImg="CheckIcon.png"/>
-                         <Label Text="Remember me"  StyleClass="LabelCheckBox"  HorizontalOptions="Start" VerticalOptions="Center"  />   
+                         <Label Text="Remember me"  StyleClass="LabelCheckBoxLogin"  HorizontalOptions="Start" VerticalOptions="Center"  />   
                     </StackLayout>
                 </StackLayout>
-                         <Button x:Name="btnLogin" CornerRadius="25" StyleClass="BtnClass" Text="LOGIN"  BackgroundColor="White" WidthRequest="300" HeightRequest="40"/>
+                         <Button x:Name="btnLogin" Command="{Binding SubmitCommand}" StyleClass="BtnClassLogin" Text="LOGIN" HeightRequest="50" />
          </StackLayout>
-            <StackLayout Grid.Column="0" Grid.Row="2" Spacing="0" Padding="0">
-                <Image Source="setting_bg.png" Margin="10,0,10,0" HeightRequest="24" WidthRequest="24"/>
-                <Image Source="settingLogin.png" Margin="10,0,10,0" HeightRequest="24" WidthRequest="24"/>
+            <StackLayout VerticalOptions="EndAndExpand" Grid.Column="1" Grid.Row="2" >
+              <Grid>
+               <Grid.RowDefinitions>
+                 <RowDefinition Height="*"/>
+               </Grid.RowDefinitions>
+                     <Image Source="setting_bg.png" VerticalOptions="EndAndExpand"  Grid.Column="0" Grid.Row="0"  WidthRequest="300" Aspect="AspectFit"/>  
+                    <Image Source="settingLogin.png"  Margin="0,-17,0,0"  VerticalOptions="StartAndExpand"  Grid.Column="0" Grid.Row="0" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" >
+                        <Image.GestureRecognizers>
+                             <TapGestureRecognizer Command="{Binding SettingCommand}" NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+              </Grid>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

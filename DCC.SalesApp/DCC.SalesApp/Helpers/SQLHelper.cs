@@ -329,12 +329,21 @@ Group by T1.ID, T1.Code, T1.Name", _WhsID.ToString()).ToList();
         #region Notes  functions
         public IEnumerable<NotesInfo> GetNotes()
         {
-
-            lock (locker)
+            try
             {
-                return database.Query<NotesInfo>(@"SELECT  T0.Details,T0.StartDate,T0.ID,T0.StartTime,T0.EndDate ,T0.EndTime ,T0.Status ,T1.Name as ActivityName,T2.Name as SubjectName,T0.BPCode from  Activities T0 
+                lock (locker)
+                {
+                    return database.Query<NotesInfo>(@"SELECT  T0.Details,T0.ID,T0.StartDate ,T0.StartTime ,T0.EndDate ,T0.EndTime ,T0.Status ,T0.Notes,T0.Priority ,T0.BPCode ,T0.Attachment,
+   T1.Name as ActivityName, T2.Name as SubjectName,T3.Name as TypeName ,T4.AreaCode  as Location from  Activities T0 
  inner join ActivityTypes T1 on T0.TypeID = T1.ID
- inner join ActivitySubjects T2 on T0.SubjectID=T2.Id");
+ inner join ActivitySubjects T2 on T0.SubjectID=T2.Id 
+inner join ActivityActions T3 on T0.ActionID=T3.Id 
+   inner join Areas T4 on T0.Location = T4.Id");
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
             }
         }
         public IEnumerable<ActivitySubjects> GetAllSubject()

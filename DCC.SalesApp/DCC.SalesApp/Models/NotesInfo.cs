@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace DCC.SalesApp.Models
 {
-    public class NotesInfo
+    public class NotesInfo : BaseViewModel
     {
         private int _ID;
         private string _Details;
@@ -16,7 +16,7 @@ namespace DCC.SalesApp.Models
         private string _Notes;
 
         private System.Nullable<System.DateTime> _StartDate;
-        private System.TimeSpan _StartTime;
+        private System.Nullable<System.TimeSpan> _StartTime;
         private System.Nullable<System.DateTime> _EndDate;
         private System.TimeSpan _EndTime;
         private string _Status;
@@ -77,6 +77,20 @@ namespace DCC.SalesApp.Models
                 //  base.OnPropertyChanging("Name");
                 _SubjectName = value;
                 //  base.OnPropertyChanged("Name");
+            }
+        }
+
+        public bool _isNotesInfo = false;
+        public bool IsNotesInfo
+        {
+            get { return _isNotesInfo; }
+            set
+            {
+                if (value != null)
+                {
+                    _isNotesInfo = value;
+                    this.OnPropertyChanged("IsNotesInfo");
+                }
             }
         }
 
@@ -164,7 +178,7 @@ namespace DCC.SalesApp.Models
         }
 
 
-        public System.TimeSpan StartTime
+        public System.Nullable<System.TimeSpan> StartTime
         {
             get
             {

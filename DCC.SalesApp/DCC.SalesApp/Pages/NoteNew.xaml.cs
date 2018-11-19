@@ -1,4 +1,5 @@
-﻿using DCC.SalesApp.Data;
+﻿using Acr.UserDialogs;
+using DCC.SalesApp.Data;
 using Default;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
@@ -128,6 +129,7 @@ namespace DCC.SalesApp.Pages
         {
             try
             {
+                UserDialogs.Instance.ShowLoading("Loading ...", MaskType.Black);
                 int i = -1;
                 ActivitySubjects Subject = (ActivitySubjects)PkSubjectype.SelectedItem;
                 ActivityActions ActiStatu = (ActivityActions)PkActiName.SelectedItem;
@@ -143,7 +145,7 @@ namespace DCC.SalesApp.Pages
                 oAct.TypeID = (ActiType.ID);
                 oAct.Details = textDetails.Text.ToString();
                 oAct.StartDate = Convert.ToDateTime(CalStartDate.Date);
-                TimeSpan interval = txtEndTime.Time;
+                TimeSpan interval = txtStartTime.Time;
                 oAct.StartTime = interval;
                 TimeSpan endtim = txtEndTime.Time;
                 oAct.EndTime = endtim;
@@ -169,6 +171,7 @@ namespace DCC.SalesApp.Pages
                 if (i > 0)
                 {
                     DisplayAlert("Save Notes ", "Your recods is submitted ", "OK");
+                    Navigation.PopAsync();
                     return;
                 }
                 else
@@ -179,10 +182,13 @@ namespace DCC.SalesApp.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
-
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                Application.Current.MainPage.DisplayAlert("Alert!", "Somthing went wrong.\nPlease try again later.", "OK");
             }
-
+            finally
+            {
+                UserDialogs.Instance.HideLoading();
+            }
         }
 
         private async void CameraButton_Clicked(object sender, EventArgs e)

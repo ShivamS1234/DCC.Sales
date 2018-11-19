@@ -17,7 +17,6 @@ namespace DCC.SalesApp
         {
             try
             {
-              
                 InitializeComponent();
                 MainPage = new LoginPageNew();
                 //this.MainPage = GetMainPage();
