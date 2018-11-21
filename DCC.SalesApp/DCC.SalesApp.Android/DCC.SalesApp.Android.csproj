@@ -53,7 +53,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DebugSymbols>true</DebugSymbols>
-    <AndroidKeyStore></AndroidKeyStore>
     <AndroidSupportedAbis>armeabi-v7a;x86_64</AndroidSupportedAbis>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
@@ -493,6 +492,24 @@
     <AndroidResource Include="Resources\drawable\Menuicon.png" />
     <AndroidResource Include="Resources\drawable\down_arrow.png" />
     <AndroidResource Include="Resources\drawable\style_PickerControl.xml" />
+    <AndroidResource Include="Resources\drawable\cashFromCustomers.png" />
+    <AndroidResource Include="Resources\drawable\customer_menu.png" />
+    <AndroidResource Include="Resources\drawable\dashboard_location.png" />
+    <AndroidResource Include="Resources\drawable\Dashboard_menu.png" />
+    <AndroidResource Include="Resources\drawable\DetailsOrderReport_menu.png" />
+    <AndroidResource Include="Resources\drawable\DSRReport_menu.png" />
+    <AndroidResource Include="Resources\drawable\myaccount.png" />
+    <AndroidResource Include="Resources\drawable\nearbyCustomers.png" />
+    <AndroidResource Include="Resources\drawable\notes_menu.png" />
+    <AndroidResource Include="Resources\drawable\OrderFullfillment.png" />
+    <AndroidResource Include="Resources\drawable\Quotations_menu.png" />
+    <AndroidResource Include="Resources\drawable\SalesOrder_menu.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\settingIcon.png" />
+    <AndroidResource Include="Resources\drawable\stockatWareHouse.png" />
+    <AndroidResource Include="Resources\drawable\UserPerfonace_icon.png" />
+    <AndroidResource Include="Resources\drawable\DailyActivites_menu.png" />
+    <AndroidResource Include="Resources\drawable\RegionWiseReport_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml">
@@ -500,9 +517,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\my_info.png" />
     <AndroidResource Include="Resources\drawable\odometer.png" />
-    <AndroidResource Include="Resources\drawable\reports.png" />
     <AndroidResource Include="Resources\layout\Tabbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -536,12 +551,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\OrderFulfillment.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\retailer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\dashboard.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DLLs\DevExpress.Mobile.Core.Android.v17.1.dll" />
@@ -602,7 +611,6 @@
     <AndroidResource Include="Resources\drawable\dashboardcalendar.png" />
     <AndroidResource Include="Resources\drawable\dashboardcalender.png" />
     <AndroidResource Include="Resources\drawable\dashboardsync.png" />
-    <AndroidResource Include="Resources\drawable\StockWarehouse.png" />
     <AndroidResource Include="Resources\drawable\dropdownarrow.png" />
     <AndroidResource Include="Resources\drawable\selectOutet.png" />
     <AndroidResource Include="Resources\drawable\off.png" />

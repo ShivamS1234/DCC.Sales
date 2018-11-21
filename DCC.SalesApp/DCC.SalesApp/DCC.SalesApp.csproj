@@ -268,6 +268,7 @@
     <Compile Include="CustomRenderers\CustomEditor.cs" />
     <Compile Include="CustomRenderers\CustomTimePicker.cs" />
     <Compile Include="Helpers\NumberToStringConverter.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

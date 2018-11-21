@@ -71,65 +71,6 @@
                 <Button x:Name="btnProducts" Text="View Products" StyleClass="BtnStyleFotter" Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" Clicked="toolbarSave_Clicked" />
             </StackLayout>
         </Grid>
-        <!-- <Grid>
-               
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="35"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label x:Name="lbldate" Text="Order Date" Grid.Row="0" Grid.Column="0" StyleClass="LabelClass"/>
-                <DatePicker  x:Name="CalStartDate" Grid.Row="0" Grid.Column="1" Format="dd-MMM-yy" StyleClass="DatePickerStyle" VerticalOptions="Start"/>
-
-                <Label x:Name="lblDeldate" Text="Delivery Date" Grid.Row="1" Grid.Column="0" StyleClass="LabelClass"/>
-                <DatePicker  x:Name="CalDelDate" Grid.Row="1" Grid.Column="1" Format="dd-MMM-yy" StyleClass="DatePickerStyle" VerticalOptions="Start"/>
-
-                <Label x:Name="lblCustomerName" Text="Customer Name" Grid.Row="2" Grid.Column="0" StyleClass="LabelClass"/>
-
-                <Label x:Name="pkrCustomer" Text="Choose Customer" Grid.Row="2" Grid.Column="1" StyleClass="LabelClass">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                    </Label.GestureRecognizers>
-                </Label>
-                <Image Source="nextpage.png" Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30" HorizontalOptions="End">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <Label x:Name="lblCustomerRefNo" Text="Customer Ref No." Grid.Row="3" Grid.Column="0" StyleClass="LabelClass"/>
-                <local:CustomEntry x:Name="txtCustRefNo" StyleClass="TextClass" Grid.Row="3" Grid.Column="1" />
-
-                <Label x:Name="lblCPerson" Text="Contact Person" Grid.Row="4" Grid.Column="0" StyleClass="LabelClass"/>
-                <Label x:Name="lblContactPerson" Text="" Grid.Row="4" Grid.Column="1" StyleClass="LabelClass1"/>
-
-                <Label x:Name="lblArea" Text="Location" Grid.Row="5" Grid.Column="0" StyleClass="LabelClass"/>
-                <local:CustomEntry x:Name="txtArea" StyleClass="TextClass" Grid.Row="5" Grid.Column="1" IsVisible="False"/>
-                <Label x:Name="lblAreaText" Text=""  Grid.Row="5" Grid.Column="1" StyleClass="LabelClass1"/>
-        
-
-                <Label x:Name="lblBilling" Text="Billing Address" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"  StyleClass="LabelClass"/>
-                <Picker   x:Name="pkrBilling" Grid.Row="6" Grid.Column="1"  StyleClass="PickerStyle" SelectedIndexChanged="pkrBilling_SelectedIndexChanged"/>
-
-
-                <Editor x:Name="txtBilling" StyleClass="TextClass" Grid.Row="7" Grid.Column="1"/>
-
-                <Label x:Name="lblShipping" Text="Shipping Address" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" StyleClass="LabelClass"/>
-                <Picker  x:Name="pkrShipping" Grid.Row="8" Grid.Column="1"  StyleClass="PickerStyle" SelectedIndexChanged="pkrShipping_SelectedIndexChanged"/>
-              
-                <Editor x:Name="txtShipping" StyleClass="TextClass" Grid.Row="9" Grid.Column="1" />
-
-                <Button x:Name="btnProducts" Text="View Products" StyleClass="BtnClass"  WidthRequest="100" HorizontalOptions="Center" Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" Clicked="toolbarSave_Clicked"/>
-          
-            </Grid>-->
             </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -55,8 +55,7 @@
 
             <Style TargetType="Label" Class="LeftGridLabelClass">
                 <Setter Property="TextColor" Value="{ StaticResource BgColor }" />
-                <Setter Property="BackgroundColor" Value="{ StaticResource textColor }" />
-                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontSize" Value="14" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
 

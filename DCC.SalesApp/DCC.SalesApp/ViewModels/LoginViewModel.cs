@@ -131,6 +131,7 @@ namespace DCC.SalesApp.ViewModels
                             {
                                 Application.Current.Properties["ID"] = oUser.ID;
                                 Application.Current.Properties["Code"] = oUser.Code;
+                                Application.Current.Properties["FirstName"] = oUser.FirstName;
                                 Application.Current.Properties["Email"] = oUser.Email;
                                 App.Current.MainPage = new DCC.SalesApp.Pages.UserSafetyPageNew();
                                 // App.Current.MainPage = new MainPage();
