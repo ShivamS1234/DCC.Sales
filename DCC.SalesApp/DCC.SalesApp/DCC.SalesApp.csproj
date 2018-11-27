@@ -269,6 +269,15 @@
     <Compile Include="CustomRenderers\CustomTimePicker.cs" />
     <Compile Include="Helpers\NumberToStringConverter.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Pages\Master\AddressListPage.xaml.cs">
+      <DependentUpon>AddressListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CommonVM\AddressVM.cs" />
+    <Compile Include="Pages\Master\NewAddressPage.xaml.cs">
+      <DependentUpon>NewAddressPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CommonVM\NewAddressVM.cs" />
+    <Compile Include="Models\AddressInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -280,6 +289,14 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\UserSafetyPageNew.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Master\AddressListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Master\NewAddressPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -837,6 +854,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Master\" />
+    <Folder Include="ViewModels\CommonVM\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

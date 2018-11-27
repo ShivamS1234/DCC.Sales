@@ -4,8 +4,12 @@
     xmlns:local="clr-namespace:DCC.SalesApp.Pages" 
     xmlns:views="clr-namespace:DCC.SalesApp.Views" 
     x:Class="DCC.SalesApp.Pages.Customers" 
+    x:Name="retailerList"
     xmlns:controls="clr-namespace:DCC.SalesApp.CustomRenderers" 
     xmlns:dxGrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v17.1">
+   <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddNewCommand}" Icon="plus.png" CommandParameter="{Binding Source={x:Reference Name=retailerList}}" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="15,15,15,0" BackgroundColor="White">
             <controls:InfiniteListView x:Name="lstRetailers" ItemsSource="{Binding RetailerLists}" SeparatorVisibility="None" HasUnevenRows="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

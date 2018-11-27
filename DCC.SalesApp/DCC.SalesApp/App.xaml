@@ -2,7 +2,8 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-             x:Class="DCC.SalesApp.App" xmlns:local="clr-namespace:DCC.SalesApp;assembly=DCC.SalesApp">
+             x:Class="DCC.SalesApp.App" xmlns:local="clr-namespace:DCC.SalesApp;assembly=DCC.SalesApp"
+             xmlns:localCRenderers="clr-namespace:DCC.SalesApp.CustomRenderers;assembly=DCC.SalesApp">
     <Application.Resources>
         <ResourceDictionary>
             <OnPlatform x:Key="FontFamilyName" x:TypeArguments="x:String" iOS="Verdana" Android="monospace" WinPhone="Segoe UI" />
@@ -106,6 +107,14 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
+            
+              <Style TargetType="localCRenderers:BorderEntry" Class="EntryClassKey">
+                <Setter Property="TextColor" Value="{ StaticResource textColor }" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="#F4F4F4" />
+            </Style>
+            
              <Style TargetType="Label" Class="LabelClassNotesValue">
               <!--  <Setter Property="FontFamily" Value="{DynamicResource FontFamilyName}" />-->
                 <Setter Property="TextColor" Value="#939393" />
@@ -231,7 +240,7 @@
                 <Setter Property="BorderColor" Value="White" />
                 <Setter Property="BackgroundColor" Value="#00A2FF" />
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontSize" Value="16" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
             </Style>

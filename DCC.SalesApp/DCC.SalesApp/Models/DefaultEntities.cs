@@ -11150,5 +11150,204 @@ namespace Default
             }
         }
     }
+    /// <summary>
+    /// Address. developed by Shivam Singh on the 25-Nov
+    /// </summary>
+    public partial class Address : Microsoft.Synchronization.ClientServices.SQLite.SQLiteOfflineEntity
+    {
+
+        private int _ID;
+
+        private string _CustomerCode;
+
+        private string _CustomerName;
+
+        private string _Address1;
+
+        private string _Address2;
+
+        private string _StreetAddress;
+
+        private System.Nullable<int> _PinCode;
+
+        private string _City;
+
+        private string _State;
+
+        private string _MobileNo;
+
+        private System.Nullable<decimal> _Latitude;
+
+        private System.Nullable<decimal> _Longitude;
+
+        [Microsoft.Synchronization.ClientServices.SQLite.PrimaryKey()]
+        [Microsoft.Synchronization.ClientServices.SQLite.AutoIncrement()]
+        [SQLite.PrimaryKey]
+        public int ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                _ID = value;
+                base.OnPropertyChanged("ID");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(60)]
+        public string CustomerCode
+        {
+            get
+            {
+                return _CustomerCode;
+            }
+            set
+            {
+                _CustomerCode = value;
+                base.OnPropertyChanged("CustomerCode");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(200)]
+        public string CustomerName
+        {
+            get
+            {
+                return _CustomerName;
+            }
+            set
+            {
+                _CustomerName = value;
+                base.OnPropertyChanged("CustomerName");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(1000)]
+        public string Address1
+        {
+            get
+            {
+                return _Address1;
+            }
+            set
+            {
+                _Address1 = value;
+                base.OnPropertyChanged("Address1");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(1000)]
+        public string Address2
+        {
+            get
+            {
+                return _Address2;
+            }
+            set
+            {
+                _Address2 = value;
+                base.OnPropertyChanged("Address2");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(1000)]
+        public string StreetAddress
+        {
+            get
+            {
+                return _StreetAddress;
+            }
+            set
+            {
+                _StreetAddress = value;
+                base.OnPropertyChanged("StreetAddress");
+            }
+        }
+
+        public System.Nullable<int> PinCode
+        {
+            get
+            {
+                return _PinCode;
+            }
+            set
+            {
+                _PinCode = value;
+                base.OnPropertyChanged("PinCode");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(1000)]
+        public string City
+        {
+            get
+            {
+                return _City;
+            }
+            set
+            {
+                _City = value;
+                base.OnPropertyChanged("City");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(50)]
+        public string State
+        {
+            get
+            {
+                return _State;
+            }
+            set
+            {
+                _State = value;
+                base.OnPropertyChanged("State");
+            }
+        }
+
+        [Microsoft.Synchronization.ClientServices.SQLite.MaxLength(50)]
+        public string MobileNo
+        {
+            get
+            {
+                return _MobileNo;
+            }
+            set
+            {
+                _MobileNo = value;
+                base.OnPropertyChanged("MobileNo");
+            }
+        }
+
+        public System.Nullable<decimal> Latitude
+        {
+            get
+            {
+                return _Latitude;
+            }
+            set
+            {
+                base.OnPropertyChanging("Latitude");
+                _Latitude = value;
+                base.OnPropertyChanged("Latitude");
+            }
+        }
+
+        public System.Nullable<decimal> Longitude
+        {
+            get
+            {
+                return _Longitude;
+            }
+            set
+            {
+                base.OnPropertyChanging("Longitude");
+                _Longitude = value;
+                base.OnPropertyChanged("Longitude");
+            }
+        }
+    }
 
 }

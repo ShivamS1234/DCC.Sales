@@ -63,7 +63,7 @@ namespace DCC.SalesApp.ViewModels
                     new MainPageMenuItem { Id = 13, Title = "Daily Activities Report", IconSource = "DailyActivites_menu.png", TargetType = typeof(DailyActivitiesReport)},
                     new MainPageMenuItem { Id = 14, Title = "User Performance", IconSource = "UserPerfonace_icon.png", TargetType = typeof(UserSettingPage)},
                     
-                    //new MainPageMenuItem { Id = 1, Title = "Retailers", IconSource = "reports.png", TargetType = typeof(Pages.RetailersView.RetailersList)},
+                    new MainPageMenuItem { Id = 1, Title = "Retailers", IconSource = "reports.png", TargetType = typeof(Pages.RetailersView.RetailersList)},
 
                 });
 

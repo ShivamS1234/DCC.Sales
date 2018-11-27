@@ -19,8 +19,6 @@ namespace DCC.SalesApp.Pages
         public NoteNew()
         {
             InitializeComponent();
-
-
             CameraButton.Clicked += CameraButton_Clicked;
             GalaryPhoto.Clicked += GalaryPhoto_Clicked;
             initilizePickers();

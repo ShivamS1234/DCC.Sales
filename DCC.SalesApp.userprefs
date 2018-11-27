@@ -1,22 +1,35 @@
 ﻿<Properties StartupConfiguration="{8D288D20-900F-4893-9A93-885B8468E3B7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs">
     <Files>
-      <File FileName="DCC.SalesApp/DCC.SalesApp/MainPage.xaml.cs" Line="9" Column="49" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/MainPageMaster.xaml" Line="18" Column="50" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/MainPageMaster.xaml.cs" Line="35" Column="49" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/Notes.xaml" Line="89" Column="112" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/Models/NotesInfo.cs" Line="57" Column="16" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/ViewModels/NotesViewModel.cs" Line="81" Column="36" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" Line="130" Column="16" />
-      <File FileName="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" Line="336" Column="26" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/RetailersView/AddRetailer.xaml" Line="48" Column="155" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/Master/NewAddressPage.xaml" Line="15" Column="20" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/Master/NewAddressPage.xaml.cs" Line="13" Column="46" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/Master/AddressListPage.xaml" Line="21" Column="63" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/Master/AddressListPage.xaml.cs" Line="13" Column="32" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Pages/RetailersView/AddRetailer.xaml.cs" Line="18" Column="35" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/AddressVM.cs" Line="73" Column="63" NotebookId="1" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/NewAddressVM.cs" Line="170" Column="1" NotebookId="1" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Models/DefaultEntities.cs" Line="11269" Column="44" NotebookId="1" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" Line="534" Column="23" NotebookId="1" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/Models/AddressInfo.cs" Line="43" Column="30" NotebookId="1" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/ViewModels/RetailerVM/AddRetailerViewModel.cs" Line="274" Column="1" NotebookId="1" />
+      <File FileName="DCC.SalesApp/DCC.SalesApp/ViewModels/NotesViewModel.cs" Line="80" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales 16-nov/DCC.SalesApp/DCC.SalesApp/ViewModels/NotesViewModel.cs" relfile="DCC.SalesApp/DCC.SalesApp/ViewModels/NotesViewModel.cs" line="80" column="1" />
-      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales 16-nov/DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" relfile="DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" line="159" column="1" />
-      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales 16-nov/DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" relfile="DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" line="169" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/ViewModels/NotesViewModel.cs" relfile="DCC.SalesApp/DCC.SalesApp/ViewModels/NotesViewModel.cs" line="80" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" relfile="DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" line="157" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" relfile="DCC.SalesApp/DCC.SalesApp/Pages/NoteNew.xaml.cs" line="167" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/NewAddressVM.cs" relfile="DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/NewAddressVM.cs" line="194" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/ViewModels/RetailerVM/AddRetailerViewModel.cs" relfile="DCC.SalesApp/DCC.SalesApp/ViewModels/RetailerVM/AddRetailerViewModel.cs" line="302" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/NewAddressVM.cs" relfile="DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/NewAddressVM.cs" line="170" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" relfile="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" line="539" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" relfile="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" line="530" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" relfile="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" line="536" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/AddressVM.cs" relfile="DCC.SalesApp/DCC.SalesApp/ViewModels/CommonVM/AddressVM.cs" line="74" column="1" />
+      <Breakpoint file="/Users/vinaytiwari/Downloads/DCC.Sales-master/DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" relfile="DCC.SalesApp/DCC.SalesApp/Helpers/SQLHelper.cs" line="534" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

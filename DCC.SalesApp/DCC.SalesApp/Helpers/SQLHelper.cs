@@ -80,6 +80,8 @@ namespace DCC.SalesApp.Helpers
             database.CreateTable<CashReceipts>();
 
             database.CreateTable<UserEOD>();
+
+            database.CreateTable<Address>();
         }
 
         internal  void UpdateRetailerLocation(double lat, double lon, int id)
@@ -508,7 +510,36 @@ inner join ActivityActions T3 on T0.ActionID=T3.Id
                 return (from i in database.Table<Areas>() select i).ToList();
             }
         }
+
         #endregion
+
+#region Customer_Address
+        public int AddCustomerAddress(Address _Address)
+        {
+            lock (locker)
+            {
+                return database.Insert(_Address);
+            }
+        }
+
+        public IEnumerable<AddressInfo> GetCustomerAddress()
+        {
+            try
+            {
+                lock (locker)
+                {
+                    var c=database.Query<Retailers>(@"SELECT  *  FROM [Retailers]");
+                    var a=database.Query<Address>(@"SELECT  *  FROM Address ");
+
+                    return database.Query<AddressInfo>(@"SELECT  CustomerT.Name CustomerName, CustomerT.OwnerEmail Email, CustomerT.OwnerMobileNo MobileNo, AddressT.Address1 Address, AddressT.PinCode PinCode  FROM [Retailers] CustomerT  left join Address AddressT on CustomerT.Code = AddressT.CustomerCode");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+#endregion
 
         #region Orders functions
 

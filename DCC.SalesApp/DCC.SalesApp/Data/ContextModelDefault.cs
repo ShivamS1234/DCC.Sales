@@ -21,7 +21,7 @@ namespace DCC.SalesApp.Data
 
             //IFolder folder = FileSystem.Current.LocalStorage;
             this.DatabaseName = "DCCSalesApp.db3";
-            ////  this.DatabasePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, this.DatabaseName);
+            ////this.DatabasePath = Path.Combine(ApplicationData.Current.LocalFolder.Path, this.DatabaseName);
             //this.DatabasePath = PortablePath.Combine(FileSystem.Current.LocalStorage.ToString(), this.DatabaseName);
 
             this.DatabasePath = Xamarin.Forms.DependencyService.Get<ISQLite>().DatabasePath();

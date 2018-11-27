@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using DCC.SalesApp.Pages.Master;
 using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace DCC.SalesApp.ViewModels.RetailerVM
         private Default.BPClass _selectedBPClass;
         private Default.BPGroup _selectedBPGroup;
         private Default.Areas _selectedArea;
-        private Default.Retailers _newRetailer;
+        public static Default.Retailers _newRetailer;
 
         private int _ID;
         private string _Code;
@@ -34,7 +35,7 @@ namespace DCC.SalesApp.ViewModels.RetailerVM
         private System.Nullable<int> _BPClass;
         private System.Nullable<decimal> _Balance;
         private System.Nullable<decimal> _CrLimit;
-       
+        private INavigation navigation;
 
         public string Code
         {
@@ -250,19 +251,28 @@ namespace DCC.SalesApp.ViewModels.RetailerVM
                 RaisePropertyChanged();
             }
         }
-        public AddRetailerViewModel()
+        public AddRetailerViewModel(INavigation _navigation)
         {
             AddNewCommand = new Command<object>(SaveRecords);
             areas = new ObservableCollection<Default.Areas>( App.database.GetAllLocation());
             bpGroup = App.database.GetBPGroups();
             bpClass = App.database.GetBPClasses();
+            Code = App.database.nextTableID("Retailers").ToString();
+            navigation = _navigation;
+
         }
         public Command<object> AddNewCommand { get; set; }
 
         private async void SaveRecords(object obj)
         {
+            if (_selectedArea == null || selectedBPClass == null || selectedBPGroup == null )
+            {
+                await Application.Current.MainPage.DisplayAlert("Message", "could not blank Area, BP Group and BP Class!", "OK");
+                return;
+            }
+
             _newRetailer = new Default.Retailers();
-            _newRetailer.ID= App.database.nextTableID("Retailers");
+            _newRetailer.ID= int.Parse(Code);
             _newRetailer.Code = _Code;
             _newRetailer.Name = _Name;
             _newRetailer.Address = _Address;
@@ -284,8 +294,9 @@ namespace DCC.SalesApp.ViewModels.RetailerVM
             UserDialogs.Instance.ShowLoading("Loading ...", MaskType.Black);            
             try
             {
-                var success = App.database.AddRetailer(_newRetailer);
-                await Application.Current.MainPage.DisplayAlert("Message", "Customer inserted successfully.", "OK");
+                //var success = App.database.AddRetailer(_newRetailer);
+                navigation.PushAsync(new AddressListPage() { Title = "Customer Address List" });
+                //await Application.Current.MainPage.DisplayAlert("Message", "Customer inserted successfully.", "OK");
             }
             catch(Exception ex)
             {
@@ -296,6 +307,8 @@ namespace DCC.SalesApp.ViewModels.RetailerVM
             {
                 UserDialogs.Instance.HideLoading();
             }
+
+
 
         }
         private void RaisePropertyChanged([CallerMemberName] string name=null)
